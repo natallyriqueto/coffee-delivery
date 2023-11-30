@@ -9,12 +9,13 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
     }
 
-    body, input, textarea, button {
+    /* body, input, textarea, button {
         font: 400 1rem Roboto, sans-serif;
-    }
+    } */
 
     body {
-        color: ${props => props.theme.text['primary']};
+        font: 400 1rem;
+        padding: 0 160px 0 160px;
         -webkit-font-smoothing: antialiased;
     }
 

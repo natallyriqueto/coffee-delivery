@@ -19,6 +19,32 @@ export const defaultTheme = {
         text: '#574F4D',
         subtitle: '#403937',
         title: '#272221',
+    },
+
+    typography: {
+        text: {
+            fontFamily: 'Roboto',
+            fontSize: {
+                xsmall: '12px', 
+                small: '14px',
+                medium: '16px',
+                large: '20px',
+            },
+        },
+        title: {
+            fontFamily: 'Baloo 2',
+            fontSize: {
+                xsmall: '18px', 
+                small: '20px',
+                medium: '24px',
+                large: '32px',
+                xlarge: '48px'
+            }
+        },
+        fontWeight: {
+            regular: 400,
+            bold: 700,
+        },
     }
   
-  };
+  }
