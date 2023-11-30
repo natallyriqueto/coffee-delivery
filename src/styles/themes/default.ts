@@ -8,7 +8,7 @@ export const defaultTheme = {
     'purple': '#8047F8',
     'purple-dark': '#4B2995',
     
-    'base': {
+    base: {
         background: '#FAFAFA',
         white: '#FFFFFF',
         card: '#F3F2F2',
@@ -25,20 +25,20 @@ export const defaultTheme = {
         text: {
             fontFamily: 'Roboto',
             fontSize: {
-                xsmall: '12px', 
-                small: '14px',
-                medium: '16px',
-                large: '20px',
+                xsmall: '0.75rem', 
+                small: '0.8rem',
+                medium: '1rem',
+                large: '1.25rem',
             },
         },
         title: {
-            fontFamily: 'Baloo 2',
+            fontFamily: `'Baloo 2'`,
             fontSize: {
-                xsmall: '18px', 
-                small: '20px',
-                medium: '24px',
-                large: '32px',
-                xlarge: '48px'
+                xsmall: '1.125rem', 
+                small: '1.25rem',
+                medium: '1.5rem',
+                large: '2rem',
+                xlarge: '3rem'
             }
         },
         fontWeight: {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const HeaderContainer = styled.header`
-    padding: 2rem;
+    padding: 2rem 10rem;
     display: flex;
     justify-content: space-between;
 
@@ -19,6 +19,7 @@ export const HeaderContent = styled.div`
 `;
 
 export const Cart = styled.div`
+    display: flex;
     background: ${props => props.theme['yellow-light']};
     border-radius: 6px;
     padding: 0.5rem;
@@ -38,3 +39,4 @@ export const Location = styled.div`
     font-family: ${props => props.theme.typography.text.fontFamily};
     font-size: ${props => props.theme.typography.text.small};
 `;
+
