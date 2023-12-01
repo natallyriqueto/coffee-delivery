@@ -4,11 +4,16 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
     padding: 2rem 10rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     img {
         width: 5rem;
         height: 2.5rem;
+    }
+
+    @media (max-width: 650px) {
+        padding: 2rem;
     }
 `;
 

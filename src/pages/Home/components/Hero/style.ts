@@ -9,15 +9,28 @@ export const HeroContainer = styled.div`
 
     display: flex;
     justify-content: space-between;
-    
+    gap: 3.5rem;
+
     img {
-        width: 476px;
-        height: 360px;
+        max-width: 50%;
+        height: 50%;
     }
+
+    @media (max-width: 1200px) {
+        img {
+            display: none;
+        }
+        justify-content: center;
+    }
+
+    @media (max-width: 650px) {
+        padding: 5.8rem 2rem;
+    }
+
 `;
 
 export const HeroContent = styled.div`
-    max-width: 36rem;
+    flex: 1;
 `;
 
 export const Title = styled.h1`

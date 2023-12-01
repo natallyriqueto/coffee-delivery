@@ -19,4 +19,10 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
+
+    @media (max-width: 800px) {
+        html {
+            font-size: 87%;
+        }
+    }
 `;
