@@ -41,7 +41,6 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.p`
-    font-family: ${props => props.theme.typography.text.fontFamily};
     font-size: ${props => props.theme.typography.text.fontSize.large};
     color: ${props => props.theme.base.subtitle};
 `;

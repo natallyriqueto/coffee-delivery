@@ -9,8 +9,8 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
     }
 
-    body {
-        font: 400 1rem;
+    body, input, textarea, button {
+        font: 400 1rem 'Roboto';
         -webkit-font-smoothing: antialiased;
         line-height: 1.3;
     }

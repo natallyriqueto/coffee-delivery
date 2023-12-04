@@ -6,18 +6,17 @@ export const AdvContainer = styled.div`
     gap: 0.75rem;
 
     span {
-        font-family: ${props => props.theme.typography.text.fontFamily};
         font-size: ${props => props.theme.typography.text.fontSize.medium};
         color: ${props => props.theme.base.text};
     }
 `;
 
 interface IconProps {
-    backgroundColor: string;
+    backgroundcolor: string;
 }
 
 export const IconContent = styled.div<IconProps>`
-    background-color: ${props => props.backgroundColor};
+    background-color: ${props => props.backgroundcolor};
     border-radius: 50%;
     padding: 0.5rem;
     display: flex;

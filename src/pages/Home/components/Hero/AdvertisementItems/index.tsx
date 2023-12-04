@@ -11,7 +11,7 @@ interface ItemsProps {
 export function AdvertisementItems({description, icon: Icon, bgColor}: ItemsProps) {
     return (
         <AdvContainer>
-            <IconContent backgroundColor={bgColor}>
+            <IconContent backgroundcolor={bgColor}>
                 <Icon size={16} color="#ffff" />
             </IconContent>
             <span>{description}</span>

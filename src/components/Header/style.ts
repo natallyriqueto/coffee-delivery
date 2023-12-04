@@ -40,8 +40,7 @@ export const Location = styled.div`
 
     color: ${props => props.theme.purple};
     background: ${props => props.theme['purple-light']};
-
-    font-family: ${props => props.theme.typography.text.fontFamily};
-    font-size: ${props => props.theme.typography.text.small};
+    
+    font-size: ${props => props.theme.typography.text.fontSize.small};
 `;
 
