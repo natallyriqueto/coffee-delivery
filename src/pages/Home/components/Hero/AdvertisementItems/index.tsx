@@ -1,5 +1,6 @@
 import { ElementType } from "react";
-import { AdvContainer, IconContent } from "./style";
+import { AdvContainer } from "./style";
+import { RoundedIcon } from "@/components/RoundedIcon";
 
 
 interface ItemsProps {
@@ -8,12 +9,10 @@ interface ItemsProps {
     description: string;
 }
 
-export function AdvertisementItems({description, icon: Icon, bgColor}: ItemsProps) {
+export function AdvertisementItems({description, icon, bgColor}: ItemsProps) {
     return (
         <AdvContainer>
-            <IconContent backgroundcolor={bgColor}>
-                <Icon size={16} color="#ffff" />
-            </IconContent>
+            <RoundedIcon icon={icon} bgColor={bgColor} />
             <span>{description}</span>
         </AdvContainer>
     )

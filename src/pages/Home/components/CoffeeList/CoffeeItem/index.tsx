@@ -1,9 +1,21 @@
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
-import { CoffeTitle, CoffeeBuy, CoffeeActions, CoffeeCart, CoffeeDescription, CoffeeItemContainer, CoffeePrice, CoffeeQuantity, CoffeeTypeTag, CoffeeImage } from "./styles";
-import { useState } from "react";
-
-interface ICoffeeItemProps {
+import { 
+    CoffeTitle, 
+    CoffeeBuy, 
+    CoffeeActions, 
+    CoffeeCart, 
+    CoffeeDescription, 
+    CoffeeItemContainer, 
+    CoffeePrice, 
+    CoffeeQuantity, 
+    CoffeeTypeTag, 
+    CoffeeImage } from "./styles";
+import { useContext, useState } from "react";
+import { CartContext } from "@/contexts/CartContext";
+ 
+export interface ICoffeeItemProps {
     item: {
+        id: number;
         picture: string;
         tag: string;
         title: string;
@@ -14,15 +26,18 @@ interface ICoffeeItemProps {
 
 export function CoffeeItem({ item }: ICoffeeItemProps) {
     const [counter, setCounter] = useState(0);
+    const { addItem, removeItem } = useContext(CartContext);
 
     function addCoffee() {
         setCounter((state) => state + 1);
+        addItem({...item, quantity: counter + 1});
     }
 
     function removeCoffee() {
         if (counter > 0) {
             setCounter((state) => state - 1);
         }
+        removeItem({...item, quantity: counter - 1});
     }
 
     return (

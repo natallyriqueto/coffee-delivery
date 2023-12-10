@@ -10,14 +10,3 @@ export const AdvContainer = styled.div`
         color: ${props => props.theme.base.text};
     }
 `;
-
-interface IconProps {
-    backgroundcolor: string;
-}
-
-export const IconContent = styled.div<IconProps>`
-    background-color: ${props => props.backgroundcolor};
-    border-radius: 50%;
-    padding: 0.5rem;
-    display: flex;
-`;

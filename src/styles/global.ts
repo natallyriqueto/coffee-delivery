@@ -9,6 +9,11 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
     }
 
+    :focus {
+        outline: 0;
+        box-shadow: 0 0 0 2px ${props => props.theme['purple']};
+    }
+    
     body, input, textarea, button {
         font: 400 1rem 'Roboto';
         -webkit-font-smoothing: antialiased;
