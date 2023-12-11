@@ -3,7 +3,8 @@ import {
     OrderConfirmationContent, 
     OrderDetails, 
     SuccessContainer,
-    OrderInfo
+    OrderInfo,
+    IMGContainer
 } from "./styles";
 import deliveryIMG from "@/assets/images/deliveryIMG.png";
 import { RoundedIcon } from "@/components/RoundedIcon";
@@ -37,7 +38,9 @@ export function Success() {
                         </div>
                     </OrderInfo>
                 </OrderDetails>
-                <img src={deliveryIMG} alt="person heading to deliver order" />
+                <IMGContainer>
+                    <img src={deliveryIMG} alt="person heading to deliver order" />
+                </IMGContainer>
             </OrderConfirmationContent>
            
         </SuccessContainer>
