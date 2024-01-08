@@ -1,9 +1,10 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 
 interface CartContextType {
     cartItems: CartItemsType[];
     addItem: (item: CartItemsType) => void;
     removeItem: (item: CartItemsType) => void;
+    total: number;
 }
 
 export const CartContext = createContext({} as CartContextType);
@@ -16,12 +17,28 @@ export interface CartItemsType {
     id: number;
     picture: string;
     title: string;
-    price: string;
+    price: number;
     quantity: number;
 }
   
 export function CartContextProvider({ children }: TransactionProviderProps) {
     const [cartItems, setCartItems] = useState([] as CartItemsType[]);
+    const [total, setTotal] = useState(0);
+
+    useEffect(() => {
+        sumTotal();
+    }, [cartItems]);
+
+    function sumTotal() {
+        const total = cartItems.reduce(
+            (acc, currentValue) => acc + Number(currentValue.price) * Number(currentValue.quantity),
+            0,
+        );
+
+        const roundedTotal = Number(total.toFixed(2));
+
+        setTotal(roundedTotal);
+    }
 
     function addItem(newItem: CartItemsType) {
         const exists = cartItems.find((item) => item.id === newItem.id);
@@ -57,7 +74,8 @@ export function CartContextProvider({ children }: TransactionProviderProps) {
         <CartContext.Provider value={{
             cartItems, 
             addItem, 
-            removeItem
+            removeItem,
+            total
         }}>
             {children}
         </CartContext.Provider>

@@ -12,6 +12,10 @@ export const HeaderContainer = styled.header`
         height: 2.5rem;
     }
 
+    svg {
+        display: flex;
+    }
+
     @media (max-width: 650px) {
         padding: 2rem;
     }
@@ -28,6 +32,7 @@ export const Cart = styled.div`
     background: ${props => props.theme['yellow-light']};
     border-radius: 6px;
     padding: 0.5rem;
+    position: relative;
 `;
 
 export const Location = styled.div`
@@ -44,3 +49,18 @@ export const Location = styled.div`
     font-size: ${props => props.theme.typography.text.fontSize.small};
 `;
 
+export const CartBadge = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: ${props => props.theme['yellow-dark']};
+    color: white;
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+    right: -0.5rem;
+    top: -0.6rem;
+    font-size: ${props => props.theme.typography.text.fontSize.small};
+    font-weight: 800;
+`;  

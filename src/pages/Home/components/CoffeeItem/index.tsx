@@ -12,6 +12,7 @@ import {
     CoffeeImage } from "./styles";
 import { useContext, useState } from "react";
 import { CartContext } from "@/contexts/CartContext";
+import { Link } from "react-router-dom";
  
 export interface ICoffeeItemProps {
     item: {
@@ -20,7 +21,7 @@ export interface ICoffeeItemProps {
         tag: string;
         title: string;
         description: string;
-        price: string;
+        price: number;
     }
 }
 
@@ -62,7 +63,9 @@ export function CoffeeItem({ item }: ICoffeeItemProps) {
                         <Plus size={14} color="#4B2995" onClick={addCoffee} />
                     </CoffeeQuantity>
                     <CoffeeCart>
-                        <ShoppingCart weight="fill" size={22} color="#ffff" />
+                        <Link to="/checkout">
+                            <ShoppingCart weight="fill" size={22} color="#ffff" />
+                        </Link>
                     </CoffeeCart>
                 </CoffeeActions>
 

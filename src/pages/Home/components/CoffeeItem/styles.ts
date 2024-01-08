@@ -78,6 +78,10 @@ export const CoffeeCart = styled.div`
     border-radius: 6px;
     padding: 0.5rem;
     display: flex;
+
+    svg {
+        display: flex;
+    }
 `;
 
 export const CoffeeActions = styled.div`

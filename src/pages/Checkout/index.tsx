@@ -8,7 +8,14 @@ import {
     CheckoutContent,
     PaymentTypeButton,
     PaymentType,
-    CartListItems
+    OrderItem,
+    RemoveButton,
+    CheckoutTitle,
+    OrderQuantity,
+    Actions,
+    OrderInfo,
+    TotalPrice,
+    ConfirmButton
 } from "./style";
 import { 
     Bank, 
@@ -17,14 +24,14 @@ import {
     MapPinLine,
     Minus,
     Money,
-    Plus
+    Plus,
+    Trash
 } from "phosphor-react";
 import { useContext } from "react";
 import { CartContext, CartItemsType } from "@/contexts/CartContext";
-import { CoffeeQuantity } from "../Home/components/CoffeeList/CoffeeItem/styles";
 
 export function Checkout() {
-    const { cartItems, addItem, removeItem } = useContext(CartContext);
+    const { cartItems, addItem, removeItem, total } = useContext(CartContext);
 
     function addCoffee(item: CartItemsType) {
         addItem({...item, quantity: item.quantity + 1});
@@ -36,9 +43,10 @@ export function Checkout() {
 
     return (
         <CheckoutContainer>
-
-            <CheckoutContent>
-                <h2>Complete seu pedido</h2>
+            {cartItems.length > 0 ? 
+            <>
+             <CheckoutContent>
+                <CheckoutTitle>Complete seu pedido</CheckoutTitle>
                 <Card>
                     <CheckoutSubtitle 
                         icon={MapPinLine} 
@@ -88,30 +96,51 @@ export function Checkout() {
             </CheckoutContent>
 
             <OrderCart>
-                <h2>Cafés selecionados</h2>
+                <CheckoutTitle>Cafés selecionados</CheckoutTitle>
                 <OrderContent>
-                    <div>
-                        <div>
-                            {cartItems.map((item) => {
-                                return (
-                                    <CartListItems>
-                                        <img src={item.picture} />
+                    <OrderItem>
+                    {cartItems.map((item) => {
+                        return (
+                            <div>
+                                <OrderInfo>
+                                    <img src={item.picture} />
+                                    <Actions>
                                         <p>{item.title}</p>
-                                        <CoffeeQuantity>
-                                            <Minus size={14} color="#4B2995" onClick={() => removeCoffee(item)} />
-                                            <span>{item.quantity}</span>
-                                            <Plus size={14} color="#4B2995" onClick={() => addCoffee(item)} />
-                                        </CoffeeQuantity>
-                                        <p>{item.price}</p>
-                                    </CartListItems>
-                                )
-                            })}
-                        </div>
+                                        <div>
+                                            <OrderQuantity>
+                                                <Minus size={14} color="#4B2995" onClick={() => removeCoffee(item)} />
+                                                <span>{item.quantity}</span>
+                                                <Plus size={14} color="#4B2995" onClick={() => addCoffee(item)} />
+                                            </OrderQuantity>
+                                            <RemoveButton type="button">
+                                                <Trash size={16} />
+                                                Remover
+                                            </RemoveButton>
+                                        </div>
+                                    </Actions>
+                                </OrderInfo>
+                                <strong>R$ {item.price * item.quantity}</strong>
+                            </div>
+                        )
+                    })}
+                    </OrderItem>
+                    
+                    <TotalPrice>
+                        <span>Total de itens</span>
+                        <span>R$ 29,70</span>
+                        <span>Entrega</span>
+                        <span>R$ 3,50</span>
+                        <h3>Total</h3>
+                        <h3>R$ {total}</h3>
+                    </TotalPrice>
 
-                    </div>
+                    <ConfirmButton type="button">Confirmar Pedido</ConfirmButton>
                 </OrderContent>
             </OrderCart>
-        
+            </>
+            :
+            <CheckoutTitle>Your Cart is empty.</CheckoutTitle>
+        }
         </CheckoutContainer>
     );
 }
