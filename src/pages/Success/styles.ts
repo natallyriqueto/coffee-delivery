@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 export const SuccessContainer = styled.div`
     padding: 5rem 10rem;
+    max-width: 90rem;
+    margin: 0 auto; 
+    height: 100vh;
 
     img {
         width: 100%; 

@@ -2,14 +2,19 @@ import styled from "styled-components";
 import backgroundImage from "@/assets/images/background.png"
 
 export const HeroContainer = styled.div`
-    padding: 5.8rem 10rem;
-
     background-image: url(${backgroundImage});
     background-size: cover;
+`;
+
+export const HeroContent = styled.div`
+    max-width: 90rem;
+    margin: 0 auto; 
 
     display: flex;
     justify-content: space-between;
     gap: 3.5rem;
+
+    padding: 5.8rem 10rem;
 
     img {
         max-width: 50%;
@@ -25,12 +30,7 @@ export const HeroContainer = styled.div`
 
     @media (max-width: 650px) {
         padding: 5.8rem 2rem;
-    }
-
-`;
-
-export const HeroContent = styled.div`
-    flex: 1;
+    } 
 `;
 
 export const Title = styled.h1`

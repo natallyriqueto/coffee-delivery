@@ -8,7 +8,10 @@ export const CheckoutTitle = styled.h2`
 
 export const CheckoutContainer = styled.div`
     padding: 2.5rem 9rem;
-
+    max-width: 90rem;
+    margin: 0 auto; 
+    height: 100vh;
+    
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
