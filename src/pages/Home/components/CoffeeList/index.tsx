@@ -30,113 +30,113 @@ export function CoffeeList() {
         { 
             id: 1,
             picture: expressoIMG,
-            tag: "Tradicional", 
-            title: "Expresso Tradicional", 
-            description: "O tradicional café feito com água quente e grãos moídos",
+            tag: "Traditional", 
+            title: "Traditional Espresso", 
+            description: "Traditional coffee made with hot water and ground beans",
             price: 9.99
         },
         { 
             id: 2,
             picture: expressoAmericanoIMG,
-            tag: "Tradicional", 
-            title: "Expresso Americano", 
-            description: "Expresso diluído, menos intenso que o tradicional",
+            tag: "Traditional", 
+            title: "American Espresso", 
+            description: "Diluted espresso, less intense than traditional",
             price: 10.59
         },
         { 
             id: 3,
             picture: expressoCremosoIMG,
-            tag: "Tradicional", 
-            title: "Expresso Cremoso", 
-            description: "Café expresso tradicional com espuma cremosa",
+            tag: "Traditional", 
+            title: "Creamy Espresso", 
+            description: "Traditional espresso with creamy foam",
             price: 7.99
         },
         { 
             id: 4,
             picture: expressoGeladoIMG,
-            tag: "Tradicional", 
-            title: "Expresso Gelado", 
-            description: "Bebida preparada com café expresso e cubos de gelo",
+            tag: "Traditional", 
+            title: "Iced Espresso", 
+            description: "Drink prepared with espresso and ice cubes",
             price: 8.99
         },
         { 
             id: 5,
             picture: cafeComLeiteIMG,
-            tag: "com leite", 
+            tag: "milk", 
             title: "Café com Leite", 
-            description: "Meio a meio de expresso tradicional com leite vaporizado",
+            description: "Half and half traditional espresso steamed milk",
             price: 5.59
         },
         { 
             id: 6,
             picture: latteIMG,
-            tag: "com leite", 
+            tag: "milk", 
             title: "Latte", 
-            description: "Uma dose de café expresso com o dobro de leite e espuma cremosa",
+            description: "A shot of espresso with double the milk and creamy foam",
             price: 11.59
         },
         { 
             id: 7,
             picture: capuccinoIMG,
-            tag: "com leite", 
+            tag: "milk", 
             title: "Capuccino", 
-            description: "Bebida com canela feita de doses iguais de café, leite e espuma",
+            description: "Cinnamon drink made from equal doses of coffee, milk and foam",
             price: 9.99
         },
         {
             id: 8,
             picture: macchiatoIMG,
-            tag: "com leite", 
+            tag: "milk", 
             title: "Macchiato", 
-            description: "Café expresso misturado com um pouco de leite quente e espuma",
+            description: "Espresso mixed with some hot milk and froth",
             price: 9.99
         },
         {
             id: 9,
             picture: mochaccinoIMG,
-            tag: "com leite", 
+            tag: "milk", 
             title: "Mocaccino", 
-            description: "Café expresso com calda de chocolate, pouco leite e espuma",
+            description: "Espresso with chocolate syrup, little milk and foam",
             price: 6.75
         },
         {
             id: 10,
             picture: chocolateQuenteIMG,
-            tag: "com leite", 
-            title: "Chocolate Quente", 
-            description: "Bebida feita com chocolate dissolvido no leite quente e café",
+            tag: "milk", 
+            title: "Hot Chocolate", 
+            description: "Drink made with chocolate dissolved in hot milk and coffee",
             price: 9.99
         },
         {
             id: 11,
             picture: cubanoIMG,
-            tag: "gelado", 
-            title: "Cubano", 
-            description: "Drink gelado de café expresso com rum, creme de leite e hortelã",
+            tag: "Iced", 
+            title: "Cuban", 
+            description: "Iced espresso drink with rum, cream and mint",
             price: 8.59
         },
         {
             id: 12,
             picture: havaianoIMG,
-            tag: "especial", 
-            title: "Havaiano", 
-            description: "Bebida adocicada preparada com café e leite de coco",
+            tag: "special", 
+            title: "Hawaiian", 
+            description: "Sweet drink prepared with coffee and coconut milk",
             price: 7.45
         },
         {
             id: 13,
             picture: arabeIMG,
-            tag: "especial", 
-            title: "Árabe", 
-            description: "Bebida preparada com grãos de café árabe e especiarias",
+            tag: "special", 
+            title: "Arabic", 
+            description: "Drink prepared with Arabic coffee beans and spices",
             price: 6.99
         },
         { 
             id: 14,
             picture: irlandesIMG,
-            tag: "alcoólico", 
-            title: "Irlandês", 
-            description: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
+            tag: "alcoholic", 
+            title: "Irish", 
+            description: "Drink made from coffee, Irish whiskey, sugar and whipped cream",
             price: 5.99
         }
     ]
