@@ -8,7 +8,7 @@ export const CheckoutTitle = styled.h2`
 `;
 
 export const CheckoutContainer = styled.div`
-    padding: 2.5rem 10rem;
+    padding: 2.5rem 9rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -109,7 +109,7 @@ export const PaymentTypeButton = styled(RadioGroup.Item)<PaymentTypeButtonProps>
     border-radius: 6px;
     padding: 1rem;
     cursor: pointer;
-    border: 0;
+    border: 1px solid ${props => props.theme.base.button};
 
     svg {
         color: ${props => props.theme['purple']};
@@ -187,5 +187,10 @@ export const ConfirmButton = styled.button`
     border: none;
     padding: 0.75rem;
     width: 100%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: ${props => props.theme['yellow-dark']};
+    }
 `;
 

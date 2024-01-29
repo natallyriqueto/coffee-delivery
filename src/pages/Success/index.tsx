@@ -12,29 +12,29 @@ import { RoundedIcon } from "@/components/RoundedIcon";
 export function Success() {
     return (
         <SuccessContainer>
-            <h1>Uhuu! Pedido confirmado.</h1>
-            <h2>Agora é só aguardar que logo o café chegará até você</h2>
+            <h1>Uhuu! Order placed.</h1>
+            <h2>Now just wait and the coffee will reach you soon.</h2>
 
             <OrderConfirmationContent>
                 <OrderDetails>
                     <OrderInfo>
                         <RoundedIcon icon={MapPin} bgColor="#8047F8" />
                         <div>
-                            <p>Entrega em Rua João Daniel Martinelli, 102 Farrapos - Porto Alegre, RS</p>
+                            <p>Delivery in Piscataway - New Jersey</p>
                         </div>
                     </OrderInfo>
                     <OrderInfo>
                         <RoundedIcon icon={Clock} bgColor="#DBAC2C" />
                         <div>
-                            <p>Previsão de entrega</p>
+                            <p>Estimate time</p>
                             <strong>20 min - 30 min </strong>
                         </div>
                     </OrderInfo>
                     <OrderInfo>
                         <RoundedIcon icon={CurrencyDollar} bgColor="#C47F17" />
                         <div>
-                            <p>Pagamento na entrega</p>
-                            <strong>Cartão de Crédito</strong>
+                            <p>Payment on delivery</p>
+                            <strong>Credit Card</strong>
                         </div>
                     </OrderInfo>
                 </OrderDetails>

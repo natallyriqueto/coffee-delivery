@@ -29,6 +29,7 @@ import {
 } from "phosphor-react";
 import { useContext } from "react";
 import { CartContext, CartItemsType } from "@/contexts/CartContext";
+import { Link } from "react-router-dom";
 
 export function Checkout() {
     const { cartItems, addItem, removeItem, total } = useContext(CartContext);
@@ -46,7 +47,7 @@ export function Checkout() {
             {cartItems.length > 0 ? 
             <>
              <CheckoutContent>
-                <CheckoutTitle>Complete seu pedido</CheckoutTitle>
+                <CheckoutTitle>Proceed to checkout</CheckoutTitle>
                 <Card>
                     <CheckoutSubtitle 
                         icon={MapPinLine} 
@@ -60,8 +61,8 @@ export function Checkout() {
                     <CheckoutSubtitle 
                         icon={CurrencyDollarSimple} 
                         iconColor="#8047F8"
-                        title="Pagamento" 
-                        description="O pagamento é feito na entrega. Escolha a forma que deseja pagar"
+                        title="Payment" 
+                        description="Payment is made upon delivery. Choose the way you want to pay"
                     />
                     
                     <form>
@@ -71,7 +72,7 @@ export function Checkout() {
                                 value="credito" 
                             >
                                 <CreditCard size={16} />
-                                Cartão de crédito
+                                Credit Card
                             </PaymentTypeButton>
 
                             <PaymentTypeButton 
@@ -79,7 +80,7 @@ export function Checkout() {
                                 value="debito" 
                             >
                                 <Bank size={16} />
-                                Cartão de débito
+                                Debit Card
                             </PaymentTypeButton>
 
                             <PaymentTypeButton 
@@ -87,7 +88,7 @@ export function Checkout() {
                                 value="dinheiro" 
                             >
                                 <Money size={16} />
-                                Dinheiro
+                                Cash
                             </PaymentTypeButton>
                         </PaymentType> 
                     </form>
@@ -96,7 +97,7 @@ export function Checkout() {
             </CheckoutContent>
 
             <OrderCart>
-                <CheckoutTitle>Cafés selecionados</CheckoutTitle>
+                <CheckoutTitle>Selected items</CheckoutTitle>
                 <OrderContent>
                     <OrderItem>
                     {cartItems.map((item) => {
@@ -114,7 +115,7 @@ export function Checkout() {
                                             </OrderQuantity>
                                             <RemoveButton type="button">
                                                 <Trash size={16} />
-                                                Remover
+                                                Remove
                                             </RemoveButton>
                                         </div>
                                     </Actions>
@@ -133,8 +134,10 @@ export function Checkout() {
                         <h3>Total</h3>
                         <h3>R$ {total}</h3>
                     </TotalPrice>
-
-                    <ConfirmButton type="button">Confirmar Pedido</ConfirmButton>
+                    
+                    <Link to="/success"> 
+                        <ConfirmButton type="button">Place your order</ConfirmButton>
+                    </Link>
                 </OrderContent>
             </OrderCart>
             </>

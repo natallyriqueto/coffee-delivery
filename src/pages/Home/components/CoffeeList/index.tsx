@@ -105,7 +105,7 @@ export function CoffeeList() {
             tag: "com leite", 
             title: "Chocolate Quente", 
             description: "Bebida feita com chocolate dissolvido no leite quente e café",
-            price: 9.00
+            price: 9.99
         },
         {
             id: 11,
@@ -137,13 +137,13 @@ export function CoffeeList() {
             tag: "alcoólico", 
             title: "Irlandês", 
             description: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
-            price: 5.60
+            price: 5.99
         }
     ]
     
     return (
         <CoffeeListContainer>
-            <h2>Nossos cafés</h2>
+            <h2>Our coffees</h2>
             <CoffeeListContent>
                 { coffees.map((item) => 
                     <CoffeeItem key={item.title} item={item} />

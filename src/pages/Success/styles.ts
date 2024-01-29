@@ -20,7 +20,7 @@ export const SuccessContainer = styled.div`
 
     h2 {
         color: ${props => props.theme.base.subtitle};
-        font-size: ${props => props.theme.typography.text.fontSize.large};
+        font-size: ${props => props.theme.typography.text.fontSize.medium};
         font-weight: 400;
     }
 

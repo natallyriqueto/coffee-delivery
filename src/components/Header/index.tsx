@@ -16,7 +16,7 @@ export function Header() {
             <HeaderContent>
                 <Location>
                     <MapPin size={22} weight="fill" color='#8047F8' />
-                    <span>Porto Alegre, RS</span>
+                    <span>Piscataway, NJ</span>
                 </Location>
                 <Cart>
                     <Link to="/checkout">

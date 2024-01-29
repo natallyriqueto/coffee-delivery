@@ -7,13 +7,13 @@ export function Hero() {
     return (
         <HeroContainer>
             <HeroContent>
-                <Title>Encontre o café perfeito para qualquer hora do dia</Title>
-                <SubTitle>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</SubTitle>
+                <Title>Find the perfect coffee for any time.</Title>
+                <SubTitle>With Coffee Delivery you receive your coffee wherever you are, anytime</SubTitle>
                 <Items>
-                    <AdvertisementItems bgColor="#C47F17" description="Compra simples e segura" icon={ShoppingCart} />
-                    <AdvertisementItems bgColor="#574F4D" description="Embalagem mantém o café intacto" icon={Package} />
-                    <AdvertisementItems bgColor="#DBAC2C" description="Entrega rápida e rastreada" icon={Clock} />
-                    <AdvertisementItems bgColor="#8047F8" description="O café chega fresquinho até você" icon={Coffee} />
+                    <AdvertisementItems bgColor="#C47F17" description="Simple and secure purchase" icon={ShoppingCart} />
+                    <AdvertisementItems bgColor="#574F4D" description="Packaging keeps the coffee intact" icon={Package} />
+                    <AdvertisementItems bgColor="#DBAC2C" description="Fast and tracked delivery" icon={Clock} />
+                    <AdvertisementItems bgColor="#8047F8" description="The coffee arrives fresh to you" icon={Coffee} />
                 </Items>
             </HeroContent>
             <img src={coffeeImg} alt="cup of coffee" />
