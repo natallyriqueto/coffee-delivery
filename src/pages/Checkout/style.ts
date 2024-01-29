@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-export const CheckoutTitle = styled.h2`
-    color: ${props => props.theme.base.subtitle};
-    font-family: ${props => props.theme.typography.title.fontFamily};
-    font-size: ${props => props.theme.typography.title.fontSize.xsmall};
-`;
 
 export const CheckoutContainer = styled.div`
     padding: 2.5rem 9rem;
@@ -31,6 +26,16 @@ export const CheckoutContent = styled.div`
     flex-direction: column;
     gap: 0.75rem;
     min-width: 40rem;
+
+    @media (max-width: 650px) {
+        min-width: 100%;
+    } 
+`;
+
+export const CheckoutTitle = styled.h2`
+    color: ${props => props.theme.base.subtitle};
+    font-family: ${props => props.theme.typography.title.fontFamily};
+    font-size: ${props => props.theme.typography.title.fontSize.xsmall};
 `;
 
 export const Card = styled.div`
@@ -50,6 +55,10 @@ export const OrderCart = styled.div`
     flex-direction: column;
     gap: 0.75rem;
     min-width: 28rem;
+
+    @media (max-width: 650px) {
+        min-width: 100%;
+    } 
 `;
 
 export const OrderItem = styled.div`

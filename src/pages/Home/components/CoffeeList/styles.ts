@@ -11,6 +11,10 @@ export const CoffeeListContainer = styled.div`
         font-size: ${props => props.theme.typography.title.fontSize.large};
         color: ${props => props.theme.base.subtitle};
     }
+
+    @media (max-width: 650px) {
+        padding: 5.8rem 2rem;
+    } 
 `;
 
 export const CoffeeListContent = styled.div`

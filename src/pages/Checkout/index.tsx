@@ -93,7 +93,7 @@ export function Checkout() {
                                         </div>
                                     </Actions>
                                 </OrderInfo>
-                                <strong>R$ {item.price * item.quantity}</strong>
+                                <strong>${item.price * item.quantity}</strong>
                             </div>
                         )
                     })}

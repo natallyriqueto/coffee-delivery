@@ -31,7 +31,7 @@ export function CartContextProvider({ children }: TransactionProviderProps) {
 
     function sumTotal() {
         const total = cartItems.reduce(
-            (acc, currentValue) => acc + Number(currentValue.price) * Number(currentValue.quantity),
+            (acc, currentValue) => acc + Number(currentValue.price) * Number(currentValue.quantity) + Number(3.50),
             0,
         );
 

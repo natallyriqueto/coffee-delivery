@@ -3,9 +3,12 @@ import * as RadioGroup from "@radix-ui/react-radio-group";
 
 export const PaymentType = styled(RadioGroup.Root)`
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 0.75rem;
     margin-top: 2rem;
+
+    @media(min-width: 750px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
 `;
 
 interface PaymentTypeButtonProps {

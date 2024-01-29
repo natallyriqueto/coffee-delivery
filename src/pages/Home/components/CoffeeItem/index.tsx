@@ -43,36 +43,40 @@ export function CoffeeItem({ item }: ICoffeeItemProps) {
 
     return (
         <CoffeeItemContainer>
+
             <CoffeeImage>
                 <img src={item.picture} alt="coffee image" />
             </CoffeeImage>
 
-            <CoffeeTypeTag>{item.tag}</CoffeeTypeTag>
-            <CoffeTitle>{item.title}</CoffeTitle>
-            <CoffeeDescription>{item.description}</CoffeeDescription>
 
-            <CoffeeBuy>
-                <CoffeePrice>
-                    <span>
-                        <CurrencyDollar size={16} />
-                        <strong>{item.price}</strong>
-                    </span>
-                </CoffeePrice>
+            <div>
+                <CoffeeTypeTag>{item.tag}</CoffeeTypeTag>
+                <CoffeTitle>{item.title}</CoffeTitle>
+                <CoffeeDescription>{item.description}</CoffeeDescription>
 
-                <CoffeeActions>
-                    <CoffeeQuantity>
-                        <Minus size={14} color="#4B2995" onClick={removeCoffee} />
-                        <span>{counter}</span>
-                        <Plus size={14} color="#4B2995" onClick={addCoffee} />
-                    </CoffeeQuantity>
-                    <CoffeeCart>
-                        <Link to="/checkout">
-                            <ShoppingCart weight="fill" size={22} color="#ffff" />
-                        </Link>
-                    </CoffeeCart>
-                </CoffeeActions>
+                <CoffeeBuy>
+                    <CoffeePrice>
+                        <span>
+                            <CurrencyDollar size={16} />
+                            <strong>{item.price}</strong>
+                        </span>
+                    </CoffeePrice>
 
-            </CoffeeBuy>
+                    <CoffeeActions>
+                        <CoffeeQuantity>
+                            <Minus size={14} color="#4B2995" onClick={removeCoffee} />
+                            <span>{counter}</span>
+                            <Plus size={14} color="#4B2995" onClick={addCoffee} />
+                        </CoffeeQuantity>
+                        <CoffeeCart>
+                            <Link to="/checkout">
+                                <ShoppingCart weight="fill" size={22} color="#ffff" />
+                            </Link>
+                        </CoffeeCart>
+                    </CoffeeActions>
+                </CoffeeBuy>
+            </div>
+
         </CoffeeItemContainer>
     )
 }

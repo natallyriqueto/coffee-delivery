@@ -9,18 +9,27 @@ export const CoffeeItemContainer = styled.div`
     min-height: 19rem;
     padding: 0 1.5rem  1.5rem 1.5rem;
     text-align: center;
+
+    @media(max-width: 750px) {
+        max-width: 100vw;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
 `;
 
 
 export const CoffeeImage = styled.div`
     height: 7rem;   
     position: relative;
-
-    img {
-        height: 100%;
-        position: absolute;
-        top: 0;
-        transform: translate(-50%, -20%);
+   
+    @media(min-width: 750px) {
+        img {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transform: translate(-50%, -20%);
+        }
     }
 `;
 
