@@ -2,7 +2,7 @@ import { InputContent, InputSelectContent } from "@/components/Input/style";
 import { FormContainer } from "./style";
 
 
-export function Form() {
+export function AddressForm() {
     const usStates = [
         { value: 'AL', label: 'Alabama' },
         { value: 'AK', label: 'Alaska' },

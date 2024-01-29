@@ -45,10 +45,6 @@ export const CoffeePrice = styled.div`
     display: flex;
     color: ${props => props.theme.base.text};
 
-    span {
-        font-size: ${props => props.theme.typography.text.fontSize.small};
-    }
-
     strong {
         font-family: ${props => props.theme.typography.title.fontFamily};
         font-size: ${props => props.theme.typography.title.fontSize.medium};

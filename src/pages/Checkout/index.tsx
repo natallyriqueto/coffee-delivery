@@ -1,13 +1,11 @@
 import { CheckoutSubtitle } from "./CheckoutSubtitle";
-import { Form } from "./Form";
+import { AddressForm } from "./AddressForm";
 import { 
     CheckoutContainer, 
     OrderContent,
     Card,
     OrderCart,
     CheckoutContent,
-    PaymentTypeButton,
-    PaymentType,
     OrderItem,
     RemoveButton,
     CheckoutTitle,
@@ -18,21 +16,19 @@ import {
     ConfirmButton
 } from "./style";
 import { 
-    Bank, 
-    CreditCard, 
-    CurrencyDollarSimple, 
     MapPinLine,
     Minus,
-    Money,
     Plus,
     Trash
 } from "phosphor-react";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext, CartItemsType } from "@/contexts/CartContext";
 import { Link } from "react-router-dom";
+import { PaymentForm } from "./PaymentForm";
 
 export function Checkout() {
     const { cartItems, addItem, removeItem, total } = useContext(CartContext);
+    const [itemsQuantity, setItemsQuantity] = useState(0);
 
     function addCoffee(item: CartItemsType) {
         addItem({...item, quantity: item.quantity + 1});
@@ -41,6 +37,17 @@ export function Checkout() {
     function removeCoffee(item: CartItemsType) {
         removeItem({...item, quantity: item.quantity - 1});
     }
+
+    function removeAll(item: CartItemsType) {
+        removeItem({...item, quantity: 0});
+    }
+
+    useEffect(() => {
+        const itemsQuantity = cartItems.reduce((acc, item) => {
+            return acc += item.quantity
+        }, 0);
+        setItemsQuantity(itemsQuantity);
+    },[cartItems])
 
     return (
         <CheckoutContainer>
@@ -55,44 +62,10 @@ export function Checkout() {
                         title="Endereço de Entrega" 
                         description="Informe o endereço onde deseja receber seu pedido"
                     />
-                    <Form />
+                    <AddressForm />
                 </Card>
                 <Card>
-                    <CheckoutSubtitle 
-                        icon={CurrencyDollarSimple} 
-                        iconColor="#8047F8"
-                        title="Payment" 
-                        description="Payment is made upon delivery. Choose the way you want to pay"
-                    />
-                    
-                    <form>
-                        <PaymentType defaultValue="default" className="RadioGroupRoot" aria-label="View density">
-                            <PaymentTypeButton 
-                                variant="credito" 
-                                value="credito" 
-                            >
-                                <CreditCard size={16} />
-                                Credit Card
-                            </PaymentTypeButton>
-
-                            <PaymentTypeButton 
-                                variant="debito" 
-                                value="debito" 
-                            >
-                                <Bank size={16} />
-                                Debit Card
-                            </PaymentTypeButton>
-
-                            <PaymentTypeButton 
-                                variant="dinheiro"
-                                value="dinheiro" 
-                            >
-                                <Money size={16} />
-                                Cash
-                            </PaymentTypeButton>
-                        </PaymentType> 
-                    </form>
-                  
+                   <PaymentForm />
                 </Card>
             </CheckoutContent>
 
@@ -113,7 +86,7 @@ export function Checkout() {
                                                 <span>{item.quantity}</span>
                                                 <Plus size={14} color="#4B2995" onClick={() => addCoffee(item)} />
                                             </OrderQuantity>
-                                            <RemoveButton type="button">
+                                            <RemoveButton type="button" onClick={() => removeAll(item)}>
                                                 <Trash size={16} />
                                                 Remove
                                             </RemoveButton>
@@ -127,12 +100,12 @@ export function Checkout() {
                     </OrderItem>
                     
                     <TotalPrice>
-                        <span>Total de itens</span>
-                        <span>R$ 29,70</span>
-                        <span>Entrega</span>
-                        <span>R$ 3,50</span>
+                        <span>Items Quantity</span>
+                        <span>{itemsQuantity}</span>
+                        <span>Tax</span>
+                        <span>$3.50</span>
                         <h3>Total</h3>
-                        <h3>R$ {total}</h3>
+                        <h3>${total}</h3>
                     </TotalPrice>
                     
                     <Link to="/success"> 

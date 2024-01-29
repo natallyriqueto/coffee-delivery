@@ -36,7 +36,6 @@ export function CartContextProvider({ children }: TransactionProviderProps) {
         );
 
         const roundedTotal = Number(total.toFixed(2));
-
         setTotal(roundedTotal);
     }
 

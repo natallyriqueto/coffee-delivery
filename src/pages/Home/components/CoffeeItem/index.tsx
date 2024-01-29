@@ -1,4 +1,4 @@
-import { Minus, Plus, ShoppingCart } from "phosphor-react";
+import { CurrencyDollar, Minus, Plus, ShoppingCart } from "phosphor-react";
 import { 
     CoffeTitle, 
     CoffeeBuy, 
@@ -53,7 +53,10 @@ export function CoffeeItem({ item }: ICoffeeItemProps) {
 
             <CoffeeBuy>
                 <CoffeePrice>
-                    <span>R$ <strong>{item.price}</strong></span>
+                    <span>
+                        <CurrencyDollar size={16} />
+                        <strong>{item.price}</strong>
+                    </span>
                 </CoffeePrice>
 
                 <CoffeeActions>
