@@ -13,7 +13,7 @@ export const CoffeeListContainer = styled.div`
     }
 
     @media (max-width: 650px) {
-        padding: 5.8rem 2rem;
+        padding: 0 2rem;
     } 
 `;
 
@@ -22,4 +22,8 @@ export const CoffeeListContent = styled.div`
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+
+    @media (max-width: 650px) {
+        gap: 1rem;
+    } 
 `;

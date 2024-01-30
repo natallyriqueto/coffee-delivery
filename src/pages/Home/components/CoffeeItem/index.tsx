@@ -57,7 +57,7 @@ export function CoffeeItem({ item }: ICoffeeItemProps) {
                 <CoffeeBuy>
                     <CoffeePrice>
                         <span>
-                            <CurrencyDollar size={16} />
+                            <CurrencyDollar size={12} />
                             <strong>{item.price}</strong>
                         </span>
                     </CoffeePrice>

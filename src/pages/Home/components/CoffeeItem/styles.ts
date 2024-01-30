@@ -87,6 +87,10 @@ export const CoffeeCart = styled.div`
     svg {
         display: flex;
     }
+
+    @media (max-width: 650px) {
+        display: none;
+    }
 `;
 
 export const CoffeeActions = styled.div`
